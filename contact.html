@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Jumana Al Rayes</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --primary: #6c63ff;
+      --secondary: #8f89ff;
+      --dark: #111827;
+      --text: #4b5563;
+      --light: #f8f9fc;
+      --border: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #ffffff;
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+      padding: 20px 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .navbar-brand {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--dark) !important;
+      letter-spacing: -0.5px;
+    }
+
+    .navbar-brand span {
+      color: var(--primary);
+    }
+
+    .nav-link {
+      color: #4b5563 !important;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary) !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+      box-shadow: none !important;
+    }
+
+    /* ================= HERO ================= */
+
+    .contact-hero {
+      min-height: 330px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(108, 99, 255, 0.15),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 80%,
+          rgba(143, 137, 255, 0.12),
+          transparent 28%
+        ),
+        #fafaff;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 50px;
+      background: rgba(108, 99, 255, 0.1);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .contact-hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+    }
+
+    .contact-hero h1 span {
+      color: var(--primary);
+    }
+
+    .contact-hero p {
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    /* Decorative circles */
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+
+    .circle-one {
+      width: 130px;
+      height: 130px;
+      border: 2px solid rgba(108, 99, 255, 0.15);
+      left: 5%;
+      top: 25%;
+    }
+
+    .circle-two {
+      width: 80px;
+      height: 80px;
+      background: rgba(108, 99, 255, 0.07);
+      right: 10%;
+      bottom: 15%;
+    }
+
+    /* ================= CONTACT SECTION ================= */
+
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: #6b7280;
+      margin-bottom: 40px;
+    }
+
+    /* Contact Cards */
+
+    .contact-card {
+      height: 100%;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(108, 99, 255, 0.35);
+      box-shadow: 0 15px 40px rgba(17, 24, 39, 0.08);
+    }
+
+    .contact-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(108, 99, 255, 0.1);
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-card h5 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-card span {
+      color: #374151;
+      font-weight: 600;
+    }
+
+    /* ================= AVAILABILITY ================= */
+
+    .availability-box {
+      margin-top: 50px;
+      padding: 35px;
+      border-radius: 22px;
+      background: var(--light);
+      border: 1px solid #eef0f5;
+    }
+
+    .availability-box h3 {
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .availability-box p {
+      color: #6b7280;
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+
+    .availability-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: rgba(34, 197, 94, 0.1);
+      color: #16a34a;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+    }
+
+    /* ================= SOCIAL ================= */
+
+    .social-section {
+      text-align: center;
+      padding: 70px 0;
+    }
+
+    .social-section h2 {
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .social-section p {
+      color: #6b7280;
+      margin-bottom: 25px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: var(--dark);
+      color: #9ca3af;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 768px) {
+
+      .navbar {
+        padding: 15px 0;
+      }
+
+      .nav-link {
+        margin-left: 0;
+        padding: 10px 0 !important;
+      }
+
+      .contact-hero {
+        min-height: 300px;
+      }
+
+      .contact-section {
+        padding: 55px 0;
+      }
+
+      .availability-box {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        Jumana<span>.</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="main.html">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="contact-hero">
+
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <span class="hero-badge">
+          <i class="bi bi-chat-dots me-1"></i>
+          Let's Connect
+        </span>
+
+        <h1>
+          Get In <span>Touch</span>
+        </h1>
+
+        <p>
+          Have a project idea, job opportunity, or just want to connect?
+          I'd love to hear from you. Feel free to reach out through any
+          of the channels below.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT INFORMATION ================= -->
+
+  <section class="contact-section">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <h2 class="section-title">
+          Contact Information
+        </h2>
+
+        <p class="section-subtitle">
+          The best ways to reach me
+        </p>
+
+      </div>
+
+
+      <div class="row g-4">
+
+        <!-- Email -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-card">
+
+            <div class="contact-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+
+            <h5>
+              Email
+            </h5>
+
+            <p>
+              Send me an email
+            </p>
+
+            <a href="mailto:jumanarayees@gmail.com">
+              jumanarayees@gmail.com
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Phone -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-card">
+
+            <div class="contact-icon">
+              <i class="bi bi-telephone"></i>
+            </div>
+
+            <h5>
+              Phone
+            </h5>
+
+            <p>
+              Available for professional inquiries
+            </p>
+
+            <a href="tel:+692785282562">
+              +962 785282562
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Location -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-card">
+
+            <div class="contact-icon">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+
+            <h5>
+              Location
+            </h5>
+
+            <p>
+              Based in
+            </p>
+
+            <span>
+              Amman, Jordan
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Availability -->
+
+        <div class="col-md-6 col-lg-3">
+
+          <div class="contact-card">
+
+            <div class="contact-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+
+            <h5>
+              Availability
+            </h5>
+
+            <p>
+              Open to
+            </p>
+
+            <span>
+              AI & Data Science Opportunities
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= AVAILABILITY MESSAGE ================= -->
+
+      <div class="availability-box">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-8">
+
+            <div class="availability-status">
+
+              <span class="status-dot"></span>
+
+              Open to Opportunities
+
+            </div>
+
+            <h3>
+              Let's build something meaningful.
+            </h3>
+
+            <p>
+              I'm interested in opportunities related to Artificial
+              Intelligence, Data Science, Machine Learning, and
+              software development. If you have an interesting
+              opportunity or collaboration in mind, feel free to
+              contact me.
+            </p>
+
+          </div>
+
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+            <a
+              href="mailto:jumanarayees@gmail.com"
+              class="btn btn-primary px-4 py-3"
+            >
+              <i class="bi bi-envelope me-2"></i>
+              Email Me
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SOCIAL ================= -->
+
+  <section class="social-section">
+
+    <div class="container">
+
+      <h2>
+        Find Me Online
+      </h2>
+
+      <p>
+        Connect with me and explore my work.
+      </p>
+
+      <div class="social-links">
+
+        <!-- LinkedIn -->
+
+        <a
+          href="https://www.linkedin.com/in/jumana-al-rayes-068480249"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="LinkedIn"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+
+
+        <!-- GitHub -->
+
+        <a
+          href="https://github.com/JumanaRayees"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="GitHub"
+        >
+          <i class="bi bi-github"></i>
+        </a>
+
+
+        <!-- Email -->
+
+        <a
+          href="mailto:jumanarayees@gmail.com"
+          class="social-link"
+          aria-label="Email"
+        >
+          <i class="bi bi-envelope"></i>
+        </a>
+
+
+        <!-- Phone -->
+
+        <a
+          href="tel:+962 785282562"
+          class="social-link"
+          aria-label="Phone"
+        >
+          <i class="bi bi-telephone"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 <strong>Jumana Al Rayes</strong>.
+        All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+</body>
+
+</html>
